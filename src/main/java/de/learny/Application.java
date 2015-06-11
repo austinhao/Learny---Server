@@ -63,6 +63,7 @@ public class Application extends SpringBootServletInitializer implements Command
     	
     	Account student = new Account("student", passwordGenerator.hashPassword("student"));
     	Account admin = new Account("admin", passwordGenerator.hashPassword("admin"));
+    	admin.setEmail("a@bc.de");
     	Account dozent = new Account("dozent", passwordGenerator.hashPassword("dozent"));
     	accountRepo.save(admin);
     	accountRepo.save(student);

@@ -1,3 +1,121 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css"
+        rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="Untitled.css">
+    </head>
+    
+    <body>
+        <div class="section section-info">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>Welcome! {{currentUser.accountName}}</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="https://unsplash.imgix.net/uploads/1411724908903377d4696/2e9b0cb2?q=25&amp;fm=jpg&amp;s=2016c4932a7b7a1b629cb6890bff9977"
+                        class="img-responsive img-thumbnail">
+                        <button type="button">Foto einfügen</button>
+                    </div>
+                    <div class="col-md-4">
+                        <p class="lead">{{currentUser.surname}} {{currentUser.lastname}}</p>
+                        <p><label>Surname:</label></p>
+                        <p><input type="text" name="surname" ng-model="surname" required placeholder="Surname eingeben"></input></p>
+                        <p><label>Lastname:</label></p>
+                        <p><input type="text" name="lastname" ng-model="lastname" required placeholder="Lastname eingeben"></input></p>
+                        <p>E-mail: {{currentUser.email}}&nbsp;</p>
+                        <p><label>Neu E-mail:</label></p>
+                        <p><input type="text" name="email" ng-model="email" required placeholder="Email eingeben"></input></p>
+                        <p>&nbsp;&nbsp;</p>
+                    </div>
+                    <div class="col-md-4">
+                        <p>Password bearbeiten</p>
+                        <p><label>Neu Password:</label></p>
+                        <p><input type="password" name="password" ng-model="password" required placeholder="Password eingeben"></input></p>
+                        <p><input type="password" name="password_2" ng-model="password" required placeholder="Password wiederholen"></input></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-right">
+                        <a class="btn btn-primary" ui-sref="app.home">Daten speichern</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <hr>
+                    </div>
+                </div>
+                <div class="row text-right">
+                    <div class="col-md-6">
+                        <p>&nbsp;</p>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <ul class="nav nav-justified nav-pills">
+                            <li>
+                                <a href="#">Meine Fäche</a>
+                            </li>
+                            <li>
+                                <a href="#">Alle Fäche</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-expanded="false">Filter<i class="fa fa-caret-down"></i></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li>
+                                        <a href="#">sortieren_1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">sortieren_2</a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li>
+                                        <a href="#">sortieren_3</a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li>
+                                        <a href="#">sortieren_4</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 text-center">
+                        <a href="#"><i class="fa fa-5x fa-fw fa-bank"></i></a>
+                        <p>fach1</p>
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <a href="#"><i class="fa fa-5x fa-cog fa-fw"></i></a>
+                        <p>fach2</p>
+                    </div>
+                    <div class="col-md-3"></div>
+                    <div class="col-md-3"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
+
+
+
 <h1> Profile</h1>
 <p>Username: {{currentUser.accountName}}</p>
 <p>id: {{currentUser.id}}</p>
+<p>E-Mail: {{currentUser.email}}</p>                   
+<p>Foto:</p>
+<p>My achievements:</p>
+<p>My Note:</p>
